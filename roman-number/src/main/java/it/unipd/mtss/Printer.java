@@ -1,6 +1,9 @@
 package it.unipd.mtss;
 
 public class Printer {
+    public static String print(int num){
+        return printAsciiArt(Converter.convert(num));
+        }
     /**
      * @param romanNumber
      * @return
