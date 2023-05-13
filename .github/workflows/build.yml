@@ -24,4 +24,4 @@ jobs:
       run: mvn -B clean package jacoco:report --file ./roman-number/pom.xml
             
     - name: Coveralls
-      run: mvn -B coveralls:report --define repoToken=${{ secrets.COVERALLS_TOKEN }} --file ./roman-number/pom.xml
+      run: mvn -B clean package jacoco:report coveralls:report --define repoToken=${{ secrets.COVERALLS_TOKEN }} --file ./roman-number/pom.xml
