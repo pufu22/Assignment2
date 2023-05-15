@@ -121,9 +121,6 @@ public class IntegerToRoman {
         decine=(value-(centinaia*100))/10;
         unita=(value-(centinaia*100)-(decine*10));
         
-
-        
-
         
         return 
         convertCentinaia(centinaia)+
