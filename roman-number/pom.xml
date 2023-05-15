@@ -22,16 +22,11 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.8.2</version>
-      <scope>test</scope>
-    </dependency>
+    
   </dependencies>
 
   <build>
-    <pluginManagement>      <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+         <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
         <plugin>
@@ -80,6 +75,7 @@
             <failsOnError>true</failsOnError>
             <configLocation>checkstyle.xml</configLocation>
             <consoleOutput>true</consoleOutput>
+            <sourceDirectories>${roman-number.src.main}</sourceDirectories>
           </configuration>
           <executions>
             <execution>
@@ -134,6 +130,6 @@
         </plugin>
 
       </plugins>
-    </pluginManagement>
+    
   </build>
 </project>

@@ -1,8 +1,13 @@
+////////////////////////////////////////////////////////////////////
+// Zhen Wei Zheng 1229141
+// Jude Vensil Braceros 2011068
+////////////////////////////////////////////////////////////////////
+
 package it.unipd.mtss;
 
-public class Printer {
+public class RomanPrinter {
     public static String print(int num){
-        return printAsciiArt(Converter.convert(num));
+        return printAsciiArt(IntegerToRoman.convert(num));
         }
     /**
      * @param romanNumber
@@ -72,7 +77,8 @@ public class Printer {
                     result.append(" |_|  |_|\n");
                     break;
                 default:
-                    throw new IllegalArgumentException("Invalid Roman numeral: " + c);
+                    throw new 
+                    IllegalArgumentException("Invalid Roman numeral: " + c);
             }
         }
         return result.toString();
