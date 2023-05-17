@@ -7,6 +7,13 @@ import org.junit.Test;
 public class RomanPrinterTest {
 
     @Test
+    public void testPrintZero() {
+        StringBuilder three = new StringBuilder();
+        assertEquals(three.toString(), RomanPrinter.print(0));
+    }
+    
+
+    @Test
     public void testPrintThree() {
         StringBuilder three = new StringBuilder();
         three.append("  _____ \n");
@@ -82,6 +89,84 @@ public class RomanPrinterTest {
         result.append("    \\  /   \n");
         result.append("     \\/    \n");
         assertEquals(result.toString(), RomanPrinter.print(664));
+    }
+
+    @Test
+    public void testPrintLongestString() {
+        StringBuilder result = new StringBuilder();
+        result.append("  _____  \n");
+        result.append(" |  __ \\ \n");
+        result.append(" | |  | |\n");
+        result.append(" | |  | |\n");
+        result.append(" | |__| |\n");
+        result.append(" |_____/ \n");
+        result.append("   _____ \n");
+        result.append("  / ____|\n");
+        result.append(" | |     \n");
+        result.append(" | |     \n");
+        result.append(" | |____ \n");
+        result.append("  \\_____|\n");
+        result.append("   _____ \n");
+        result.append("  / ____|\n");
+        result.append(" | |     \n");
+        result.append(" | |     \n");
+        result.append(" | |____ \n");
+        result.append("  \\_____|\n");
+        result.append("   _____ \n");
+        result.append("  / ____|\n");
+        result.append(" | |     \n");
+        result.append(" | |     \n");
+        result.append(" | |____ \n");
+        result.append("  \\_____|\n");
+        result.append("  _      \n");
+        result.append(" | |     \n");
+        result.append(" | |     \n");
+        result.append(" | |     \n");
+        result.append(" | |____ \n");
+        result.append(" |______|\n");
+        result.append(" __   __\n");
+        result.append(" \\ \\ / /\n");
+        result.append("  \\ V / \n");
+        result.append("   > <  \n");
+        result.append("  / . \\ \n");
+        result.append(" /_/ \\_\\\n");
+        result.append(" __   __\n");
+        result.append(" \\ \\ / /\n");
+        result.append("  \\ V / \n");
+        result.append("   > <  \n");
+        result.append("  / . \\ \n");
+        result.append(" /_/ \\_\\\n");
+        result.append(" __   __\n");
+        result.append(" \\ \\ / /\n");
+        result.append("  \\ V / \n");
+        result.append("   > <  \n");
+        result.append("  / . \\ \n");
+        result.append(" /_/ \\_\\\n");
+        result.append(" __      __\n");
+        result.append(" \\ \\    / /\n");
+        result.append("  \\ \\  / / \n");
+        result.append("   \\ \\/ /  \n");
+        result.append("    \\  /   \n");
+        result.append("     \\/    \n");
+        result.append("  _____ \n");
+        result.append(" |_   _|\n");
+        result.append("   | |  \n");
+        result.append("   | |  \n");
+        result.append("  _| |_ \n");
+        result.append(" |_____|\n");
+        result.append("  _____ \n");
+        result.append(" |_   _|\n");
+        result.append("   | |  \n");
+        result.append("   | |  \n");
+        result.append("  _| |_ \n");
+        result.append(" |_____|\n");
+        result.append("  _____ \n");
+        result.append(" |_   _|\n");
+        result.append("   | |  \n");
+        result.append("   | |  \n");
+        result.append("  _| |_ \n");
+        result.append(" |_____|\n");
+        assertEquals(result.toString(), RomanPrinter.print(888));
     }
 
 }

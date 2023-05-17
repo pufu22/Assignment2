@@ -16,7 +16,9 @@ public class IntegerToRoman {
         if (value==1000) {
             return "M";
         }
-
+        if (value<0 && value>1000){
+            return "";
+        }
 
         return thousands[value / 1000] + 
         hundreds[(value % 1000) / 100] + 
