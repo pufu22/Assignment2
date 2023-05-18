@@ -68,5 +68,101 @@ public class IntegerToRomanTest {
         assertEquals(IntegerToRoman.convert(10),"X");
     }
 
-    
+    @Test
+    public void testConvertLongestString(){
+        assertEquals(IntegerToRoman.convert(888),"DCCCLXXXVIII");
+
+        try(MockedStatic<IntegerToRoman> converter = 
+        Mockito.mockStatic(IntegerToRoman.class)) {
+            converter.when(() -> IntegerToRoman.convert(888))
+            .thenReturn("DCCCLXXXVIII");
+            assertEquals(IntegerToRoman.convert(888),"DCCCLXXXVIII");
+        }
+
+        assertEquals(IntegerToRoman.convert(888),"DCCCLXXXVIII");
+    }
+
+    @Test
+    public void testConvertFour(){
+        assertEquals(IntegerToRoman.convert(4),"IV");
+
+        try(MockedStatic<IntegerToRoman> converter = 
+        Mockito.mockStatic(IntegerToRoman.class)) {
+            converter.when(() -> IntegerToRoman.convert(4))
+            .thenReturn("IV");
+            assertEquals(IntegerToRoman.convert(4),"IV");
+        }
+
+        assertEquals(IntegerToRoman.convert(4),"IV");
+    }
+
+    @Test
+    public void testConvertSix(){
+        assertEquals(IntegerToRoman.convert(6),"VI");
+
+        try(MockedStatic<IntegerToRoman> converter = 
+        Mockito.mockStatic(IntegerToRoman.class)) {
+            converter.when(() -> IntegerToRoman.convert(6))
+            .thenReturn("VI");
+            assertEquals(IntegerToRoman.convert(6),"VI");
+        }
+
+        assertEquals(IntegerToRoman.convert(6),"VI");
+    }
+
+    @Test
+    public void testConvertNine(){
+        assertEquals(IntegerToRoman.convert(9),"IX");
+
+        try(MockedStatic<IntegerToRoman> converter = 
+        Mockito.mockStatic(IntegerToRoman.class)) {
+            converter.when(() -> IntegerToRoman.convert(9))
+            .thenReturn("IX");
+            assertEquals(IntegerToRoman.convert(9),"IX");
+        }
+
+        assertEquals(IntegerToRoman.convert(9),"IX");
+    }
+
+    @Test
+    public void testConvertEleven(){
+        assertEquals(IntegerToRoman.convert(11),"XI");
+
+        try(MockedStatic<IntegerToRoman> converter = 
+        Mockito.mockStatic(IntegerToRoman.class)) {
+            converter.when(() -> IntegerToRoman.convert(11))
+            .thenReturn("XI");
+            assertEquals(IntegerToRoman.convert(11),"XI");
+        }
+
+        assertEquals(IntegerToRoman.convert(11),"XI");
+    }
+
+    @Test
+    public void testConvertFiveHundred(){
+        assertEquals(IntegerToRoman.convert(500),"D");
+
+        try(MockedStatic<IntegerToRoman> converter = 
+        Mockito.mockStatic(IntegerToRoman.class)) {
+            converter.when(() -> IntegerToRoman.convert(500))
+            .thenReturn("D");
+            assertEquals(IntegerToRoman.convert(500),"D");
+        }
+
+        assertEquals(IntegerToRoman.convert(500),"D");
+    }
+
+    @Test
+    public void testConvertFifty(){
+        assertEquals(IntegerToRoman.convert(50),"L");
+
+        try(MockedStatic<IntegerToRoman> converter = 
+        Mockito.mockStatic(IntegerToRoman.class)) {
+            converter.when(() -> IntegerToRoman.convert(50))
+            .thenReturn("L");
+            assertEquals(IntegerToRoman.convert(50),"L");
+        }
+
+        assertEquals(IntegerToRoman.convert(50),"L");
+    }
 }
